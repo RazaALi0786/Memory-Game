@@ -34,11 +34,11 @@ function checkMatch() {
   const optionOneId = cardsChosenIds[0];
   const optionTwoId = cardsChosenIds[1];
   if (optionOneId === optionTwoId) {
-    messageDisplay.textContent = "You have clicked on the same card";
+    messageDisplay.textContent = "You have clicked on the same card 🫠";
     cards[optionOneId].setAttribute("src", "images/blank.png");
     cards[optionTwoId].setAttribute("src", "images/blank.png");
   } else if (cardsChosen[0] === cardsChosen[1]) {
-    messageDisplay.textContent = "You have found a match";
+    messageDisplay.textContent = "You have found a match 🥳";
     cards[optionOneId].setAttribute("src", "images/white.png");
     cards[optionTwoId].setAttribute("src", "images/white.png");
     cards[optionOneId].removeEventListener("click", flipCard);
@@ -47,13 +47,14 @@ function checkMatch() {
   } else {
     cards[optionOneId].setAttribute("src", "images/blank.png");
     cards[optionTwoId].setAttribute("src", "images/blank.png");
-    messageDisplay.textContent = "Try again";
+    messageDisplay.textContent = "Try again 🙋‍♂️";
   }
   resultDisplay.textContent = cardsWon.length;
   cardsChosen = [];
   cardsChosenIds = [];
   if (cardsWon.length === cardArray.length / 2) {
-    messageDisplay.textContent = "Congratulations you have found them all";
+    messageDisplay.textContent =
+      "Congratulations!! You have found them all 🎊🎊";
   }
 }
 function flipCard() {
